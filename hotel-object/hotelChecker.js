@@ -7,7 +7,11 @@ var vacant = {
         amenitites: {
             smoking: true,
             wifi: true,
+<<<<<<< HEAD
         }
+=======
+            
+>>>>>>> bcc97376d4f3c64c1b0e7de6e31354a454a4031d
     },
     room2: {
         room: 2,
@@ -37,6 +41,10 @@ Room1: ${Object.keys(vacant.room1)}
 Room2: ${Object.keys(vacant.room2)}
 Room3: ${Object.keys(vacant.room3)}
 Room4: ${Object.keys(vacant.room4)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> bcc97376d4f3c64c1b0e7de6e31354a454a4031d
 Which room would you like? `).toLowerCase();
 
 if(chosenRoom == "room1") {

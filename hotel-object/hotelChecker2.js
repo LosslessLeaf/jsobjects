@@ -10,9 +10,9 @@ vacant[0] = {
     smoking: "No Smoking",
     wifi: "No wifi",
     hottub: "No Hot tub",
-    occupancy: "Occupancy: 1",
-    availability: "Currently Available"
-
+    occupancy: 1,
+    availability: "Currently Available",
+    price: 60
 };
 vacant[1] = {
     room: "The State Room",
@@ -20,8 +20,9 @@ vacant[1] = {
     smoking: "No Smoking",
     wifi: "Wifi",
     hottub: "No Hot tub",
-    occupancy: "Occupancy: 2",
-    availability: "Currently Available"
+    occupancy: 2,
+    availability: "Currently Available",
+    price: 100
 };
 vacant[2] = {
     room: "The Presidential Suite",
@@ -29,8 +30,9 @@ vacant[2] = {
     smoking: "Smoking",
     wifi: "Wifi",
     hottub: "No Hot tub",
-    occupancy: "Occupancy: 4",
-    availability: "Currently Available"
+    occupancy: 4,
+    availability: "Currently Available",
+    price: 250
 };
 vacant[3] = {
     room: "The Penthouse",
@@ -38,8 +40,9 @@ vacant[3] = {
     smoking: "Smoking",
     wifi: "Wifi",
     hottub: "Hot tub",
-    occupancy: "Occupancy: 6",
-    availability: "Currently Available"
+    occupancy: 6,
+    availability: "Currently Available",
+    price: 1000
 };
 
 do {
@@ -48,72 +51,56 @@ var chosenRoom = readline.question("Please choose a room (1-4): ");
 
 if (chosenRoom == 1) {
     occupied.push(vacant[0]);
-    delete vacant[0];
+    vacant.splice(0, 1);
 }
 
 if (chosenRoom == 2) {
     occupied.push(vacant[1]);
-    delete vacant[1];
+    vacant.splice(1, 1);
 }
 
 if (chosenRoom == 3) {
     occupied.push(vacant[2]);
-    delete vacant[2];
+    vacant.splice(2, 1);
 }
 
 if (chosenRoom == 4) {
     occupied.push(vacant[3]);
-    delete vacant[3];
+    vacant.splice(3, 1);
 }
 
-// console.log(vacant);
+
 console.log(`You have chosen:
 ====================
-${JSON.stringify(occupied[0].room)}
+${occupied[0].room}
 ====================
 Amenities:
-${JSON.stringify(occupied[0].mattress)}
-${JSON.stringify(occupied[0].smoking)}
-${JSON.stringify(occupied[0].wifi)}
-${JSON.stringify(occupied[0].hottub)}
-${JSON.stringify(occupied[0].occupancy)}
-${JSON.stringify(occupied[0].availability)}
+${occupied[0].mattress}
+${occupied[0].smoking}
+${occupied[0].wifi}
+${occupied[0].hottub}
+Occupancy: ${occupied[0].occupancy}
+${occupied[0].availability}
+$${occupied[0].price} per night
 `);
 
-var confirmRoom = readline.question("Would you like this room? (Y/N): ").toUpperCase();
+var confirmRoom = readline.question(`Would you like this room? (Y/N): `).toUpperCase();
 
 if (confirmRoom == "Y") {
-    console.log(`You have confirmed:
-====================
-${JSON.stringify(occupied[0].room)}
-====================
-Enjoy Your Stay!`);
+    console.log(
+`
+You have confirmed:
+=========================
+    ${occupied[0].room}
+=========================
+Enjoy Your Stay!`
+);
 }
+else if(confirmRoom == "N") {
+    vacant.splice(chosenRoom-1, 0, occupied[0]);
+    occupied.splice(0, 1);
 }
-// else if (confirmRoom == "N") {
-//     vacant.push(occupied[chosenRoom]);
-//     delete occupied[0];
-//     chosenRoom = readline.question(`Please choose a different room (1-4): `);
-    
-//     if (chosenRoom == 1) {
-//         vacant.push(vacant[0]);
-//         delete vacant[0];
-//     }
 
-//     if (chosenRoom == 2) {
-//         occupied.push(vacant[1]);
-//         delete vacant[1];
-//     }
-
-//     if (chosenRoom == 3) {
-//         occupied.push(vacant[2]);
-//         delete vacant[2];
-//     }
-
-//     if (chosenRoom == 4) {
-//         occupied.push(vacant[3]);
-//         delete vacant[3];
-//     }
-// }
+}
 
 while(confirmRoom == "N");
