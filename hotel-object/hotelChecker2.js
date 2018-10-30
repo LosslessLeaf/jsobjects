@@ -46,31 +46,31 @@ vacant[3] = {
 };
 
 do {
-do {
-    var chosenRoom = readline.question("Please choose a room (1-4): ");
-    if (chosenRoom == 1 || chosenRoom == 2 || chosenRoom == 3 || chosenRoom == 4) {
-        if (chosenRoom == 1) {
-            occupied.push(vacant[0]);
-            vacant.splice(0, 1);
-        }
+    do {
+        var chosenRoom = readline.question("Please choose a room (1-4): ");
+        if (chosenRoom == 1 || chosenRoom == 2 || chosenRoom == 3 || chosenRoom == 4) {
+            if (chosenRoom == 1) {
+                occupied.push(vacant[0]);
+                vacant.splice(0, 1);
+            }
 
-        if (chosenRoom == 2) {
-            occupied.push(vacant[1]);
-            vacant.splice(1, 1);
-        }
+            if (chosenRoom == 2) {
+                occupied.push(vacant[1]);
+                vacant.splice(1, 1);
+            }
 
-        if (chosenRoom == 3) {
-            occupied.push(vacant[2]);
-            vacant.splice(2, 1);
-        }
+            if (chosenRoom == 3) {
+                occupied.push(vacant[2]);
+                vacant.splice(2, 1);
+            }
 
-        if (chosenRoom == 4) {
-            occupied.push(vacant[3]);
-            vacant.splice(3, 1);
-        }
+            if (chosenRoom == 4) {
+                occupied.push(vacant[3]);
+                vacant.splice(3, 1);
+            }
 
 
-        console.log(`You have chosen:
+            console.log(`You have chosen:
 ====================
 ${occupied[0].room}
 ====================
@@ -83,39 +83,39 @@ Occupancy: ${occupied[0].occupancy}
 ${occupied[0].availability}
 $${occupied[0].price} per night
 `);
-        do {
-            var confirmRoom = readline.question(`Would you like this room? (Y/N): `).toUpperCase();
+            do {
+                var confirmRoom = readline.question(`Would you like this room? (Y/N): `).toUpperCase();
 
-            if (confirmRoom == "Y" || confirmRoom == "N") {
-                if (confirmRoom == "Y") {
-                    console.log(
-                        `
+                if (confirmRoom == "Y" || confirmRoom == "N") {
+                    if (confirmRoom == "Y") {
+                        console.log(
+                            `
 You have confirmed:
 =========================
     ${occupied[0].room}
 =========================
 Enjoy Your Stay!`
-                    );
+                        );
+                    }
+                    else if (confirmRoom == "N") {
+                        vacant.splice(chosenRoom - 1, 0, occupied[0]);
+                        occupied.splice(0, 1);
+                    }
+                    invalid = false;
                 }
-                else if (confirmRoom == "N") {
-                    vacant.splice(chosenRoom - 1, 0, occupied[0]);
-                    occupied.splice(0, 1);
+                else {
+                    console.log("That is not a valid input");
+                    var invalid = true;
                 }
-                invalid = false;
-            }
-            else {
-                console.log("That is not a valid input");
-                var invalid = true;
-            }
-        } while (invalid == true);
-        checker = false;
+            } while (invalid == true);
+            checker = false;
+        }
+        else {
+            console.log("That is not a valid input");
+            var checker = true;
+        }
     }
-    else {
-        console.log("That is not a valid input");
-        var checker = true;
-    }
-}
-    while(checker == true);
+    while (checker == true);
 
 }
 
