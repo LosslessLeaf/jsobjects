@@ -5,6 +5,7 @@ var vacant = [];
 var occupied = [];
 
 vacant[0] = {
+    roomNumber: 101,
     room: "The Common Room",
     mattress: "Twin Mattress",
     smoking: "No Smoking",
@@ -15,6 +16,7 @@ vacant[0] = {
     price: 60
 };
 vacant[1] = {
+    roomNumber: 202,
     room: "The State Room",
     mattress: "Queen Mattress",
     smoking: "No Smoking",
@@ -25,6 +27,7 @@ vacant[1] = {
     price: 100
 };
 vacant[2] = {
+    roomNumber: 303,
     room: "The Presidential Suite",
     mattress: "California King Mattress",
     smoking: "Smoking",
@@ -35,6 +38,7 @@ vacant[2] = {
     price: 250
 };
 vacant[3] = {
+    roomNumber: 404,
     room: "The Penthouse",
     mattress: "Two King Mattresses",
     smoking: "Smoking",
@@ -74,6 +78,8 @@ do {
 ====================
 ${occupied[0].room}
 ====================
+Room: ${occupied[0].roomNumber}
+
 Amenities:
 ${occupied[0].mattress}
 ${occupied[0].smoking}
