@@ -58,17 +58,17 @@ do {
                 vacant.splice(0, 1);
             }
 
-            if (chosenRoom == 2) {
+            else if (chosenRoom == 2) {
                 occupied.push(vacant[1]);
                 vacant.splice(1, 1);
             }
 
-            if (chosenRoom == 3) {
+            else if (chosenRoom == 3) {
                 occupied.push(vacant[2]);
                 vacant.splice(2, 1);
             }
 
-            if (chosenRoom == 4) {
+            else if (chosenRoom == 4) {
                 occupied.push(vacant[3]);
                 vacant.splice(3, 1);
             }
