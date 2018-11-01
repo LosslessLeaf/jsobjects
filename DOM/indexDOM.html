@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Practice</title>
+    <script>
+    var string = document.getElementById("string").value;
+    var userName = document.getElementById("userName");
+    function encrypt() {
+        userName.innerHTML = string;
+    }
+        
+    </script>
+</head>
+
+<body>
+
+    <h1 id="maintitle">Learning DOM HTML</h1>
+    <h4 id="subtitle">WIth yours truly, Jeezy</h4>
+
+
+    <form>
+        <label>Please enter your name:</label>
+        <input type="text" name="name" id="name">
+        <input id="submit" type="button" value="Submit" onclick="encrypt()">
+    </form>
+    <p id="userName">Hello</p>
+
+    <p>FAX</p>
+    <ul>
+        <li>The DOM is a tree.</li>
+        <li>HTML tags are also called: Elements, Element Nodes</li>
+        <li>You access DOM components via its Elements</li>
+        <li>Elements have parents, children, siblings, ancestors, and descendants.</li>
+        <li>Selector a: getElementById()</li>
+        <li>Selector b: getElementsByClassName()</li>
+        <li>Selector c: querySelector()</li>
+        <li>Selector d: getElementsByTagName()</li>
+    </ul>
+
+    <p>ALT FAX</p>
+    <ul>
+        <li>The DOM is a tree.</li>
+        <li>HTML tags are also called: Elements, Element Nodes</li>
+        <li>You access DOM components via its Elements</li>
+        <li>Elements have parents, children, siblings, ancestors, and descendants.</li>
+        <li>Selector a: getElementById()</li>
+        <li>Selector b: getElementsByClassName()</li>
+        <li>Selector c: querySelector()</li>
+        <li>Selector d: getElementsByTagName()</li>
+    </ul>
+
+</body>
+
+</html>
