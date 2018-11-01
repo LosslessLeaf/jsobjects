@@ -4,27 +4,25 @@
 <head>
     <title>DOM Practice</title>
     <script>
-    var string = document.getElementById("string").value;
-    var userName = document.getElementById("userName");
-    function encrypt() {
-        userName.innerHTML = string;
-    }
-        
+        function encrypt() {
+            var string = document.getElementById("name").value;
+            var titleChange = document.getElementById("maintitle");
+            titleChange.innerHTML = string;
+        }
     </script>
 </head>
 
 <body>
 
     <h1 id="maintitle">Learning DOM HTML</h1>
-    <h4 id="subtitle">WIth yours truly, Jeezy</h4>
+    <h4 id="subtitle">With yours truly, Jeezy</h4>
 
 
-    <form>
+    <form action="#">
         <label>Please enter your name:</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" onkeypress="if(event.keyCode == 13){encrypt();return false;}">
         <input id="submit" type="button" value="Submit" onclick="encrypt()">
     </form>
-    <p id="userName">Hello</p>
 
     <p>FAX</p>
     <ul>

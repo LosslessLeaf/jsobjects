@@ -1,0 +1,33 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+.room-name {
+    display: block;
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+.room-name-displayed {
+    display: none;
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+.no-display {
+    display: none;
+}
+
+.display {
+    display: block;
+}
