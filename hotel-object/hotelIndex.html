@@ -13,20 +13,25 @@
 
     <div class="container">
             <select id="hotel-room">
-                <option name="common-room" value="The Common Room" id="common-room">The Common Room</option>
+                <option name="common-room" value="The Common Room">The Common Room</option>
                 <option name="state-room" value="The State Room">The State Room</option>
                 <option name="presidential" value="The Presidential Suite">The Presidential Suite</option>
                 <option name="penthouse" value="The Penthouse">The Penthouse</option>
             </select>
             <input type="submit" value="Choose Room" id="choose-room" onclick="selectedRoom()">
-            <span class="no-display" id="chosen-room"></span>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        
-        <input type="submit" value="Click here to populate" id="populate" onclick="populate()">
+            <p id="chosen-room"></p>
+            <ul id="amenities-container">
+                <h4 id="amenities"></h4>
+                <li id="amen1"></li>
+                <li id="amen2"></li>
+                <li id="amen3"></li>
+                <li id="amen4"></li>
+            </ul>
+            
+            <h5 id="occupancy"></h5>
+            <h5 id="availability"></h5>
+            
+            <h4 id="price"></h4>
         <div id="hotel" class="">
             <!--<div id="hotel-room" class="">-->
             <!--    <h1 id="hotel-room-name"></h1>-->

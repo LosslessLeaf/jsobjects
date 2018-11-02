@@ -31,3 +31,10 @@ h1 {
 .display {
     display: block;
 }
+
+#amenities-container {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
