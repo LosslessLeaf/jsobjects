@@ -2,26 +2,8 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-h1 {
-    margin: 0;
-    padding: 0;
-}
-.room-name {
-    display: block;
-    list-style-type: none;
-    list-style-position: inside;
-    margin: 0;
-    padding: 0;
-}
-
-.room-name-displayed {
-    display: none;
-    list-style-type: none;
-    list-style-position: inside;
-    margin: 0;
-    padding: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
 }
 
 .no-display {
@@ -32,9 +14,130 @@ h1 {
     display: block;
 }
 
-#amenities-container {
-    list-style-type: none;
+.container {
     margin: 0;
     padding: 0;
+}
+
+.main-info {
+    background: url(https://images.unsplash.com/photo-1468824357306-a439d58ccb1c?ixlib=rb-0.3.5&s=8329a7bcd8ad4bcd07b038e8b0411973&auto=format&fit=crop&w=1254&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+#main-header {
+    margin: 0;
+    padding: 20px 0;
+    position: sticky;
+    width: 100%;
+    text-align: center;
+    color: black;
+    background-color: rgba(40, 40, 40, .2);
+    top: 0;
+    font-size: 40px;
+}
+
+#room-choice {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+#room-choice h2 {
+    flex: 1;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#hotel-room {
+    align-self: center;
+    height: 50px;
+    font-size: 25px;
+    font-family: Montserrat, sans-serif;
+}
+
+#choose-room {
+    align-self: center;
+    padding: 25px;
+    margin-top: 40px;
+    display: block;
+}
+
+#chosen-room {
+    font-size: 30px;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    margin: 15px 0;
+    
+}
+#amenities {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+#chosen-room-display {
+    margin: 0 auto;
+}
+
+#room-choice ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 30px;
+    list-style-type: none;
     list-style-position: inside;
+}
+#room-choice li {
+    padding: 5px;
+}
+
+#occupancy {
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 0 10px 10px;
+}
+
+#availability {
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 0 10px 10px;
+}
+
+#price {
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 0 10px 10px;
+}
+
+#final-room {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#confirmed {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    width: 25%;
+    font-size: 2em;
+    align-self: center;
+}
+
+#final-room-confirmed {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    align-self: center;
+    width: 40%;
+    font-size: 1.4em;
+    margin-top: 20px;
+    line-height: 1.5;
 }

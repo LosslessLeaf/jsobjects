@@ -4,51 +4,82 @@
 <head>
     <title>Hotel Indexer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
-    <h1>Hello Hotel Patrons!</h1>
 
     <div class="container">
-            <select id="hotel-room">
-                <option name="common-room" value="The Common Room">The Common Room</option>
-                <option name="state-room" value="The State Room">The State Room</option>
-                <option name="presidential" value="The Presidential Suite">The Presidential Suite</option>
-                <option name="penthouse" value="The Penthouse">The Penthouse</option>
-            </select>
-            <input type="submit" value="Choose Room" id="choose-room" onclick="selectedRoom()">
-            <p id="chosen-room"></p>
-            <ul id="amenities-container">
-                <h4 id="amenities"></h4>
-                <li id="amen1"></li>
-                <li id="amen2"></li>
-                <li id="amen3"></li>
-                <li id="amen4"></li>
-            </ul>
-            
-            <h5 id="occupancy"></h5>
-            <h5 id="availability"></h5>
-            
-            <h4 id="price"></h4>
-        <div id="hotel" class="">
-            <!--<div id="hotel-room" class="">-->
-            <!--    <h1 id="hotel-room-name"></h1>-->
-            <!--    <ul id="amenities" class=""></ul>-->
-            <!--</div>-->
-            
-            
-            
-            
+        <div class="main-info">
+            <h1 id="main-header">ASTORIA INN</h1>
         </div>
-        <!--<ul id="room-name" class="room-name">-->
-        <!--    <li id="room0">hello</li>-->
-        <!--    <li id="room1">you</li>-->
-        <!--    <li id="room2">little</li>-->
-        <!--    <li id="room3">monster</li>-->
-        <!--</ul>-->
+        <div id="redisplay" class="display">
+            <div id="room-choice">
+                <h2>Which room would you like to see?</h2>
+                <select id="hotel-room">
+                    <option name="common-room" value="The Common Room">The Common Room</option>
+                    <option name="state-room" value="The State Room">The State Room</option>
+                    <option name="presidential" value="The Presidential Suite">The Presidential Suite</option>
+                    <option name="penthouse" value="The Penthouse">The Penthouse</option>
+                </select>
+                <input type="submit" value="Choose Room" id="choose-room" onclick="selectedRoom()">
+                <div id="chosen-room-display" class="no-display">
+                    <p id="chosen-room"></p>
+                    <h4 id="amenities"></h4>
+                    <ul>
+                        <li id="amen1"></li>
+                        <li id="amen2"></li>
+                        <li id="amen3"></li>
+                        <li id="amen4"></li>
+                    </ul>
+                    <h4 id="occupancy">
+                        </h5>
+                        <h4 id="availability">
+                            </h5>
+                            <h4 id="price"></h4>
+                            <label>Would you like this room?</label>
+                            <input type="submit" value="Yes" id="Yes" onclick="finalizedRoom()">
+                </div>
+            </div>
+
+        </div>
+        <div id="final-room" class="no-display">
+            <h5 id="confirmed"></h5>
+            <p id="final-room-confirmed"></p>
+        </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+    <!--<div class="container">-->
+    <!--    <select id="hotel-room">-->
+    <!--            <option name="common-room" value="The Common Room">The Common Room</option>-->
+    <!--            <option name="state-room" value="The State Room">The State Room</option>-->
+    <!--            <option name="presidential" value="The Presidential Suite">The Presidential Suite</option>-->
+    <!--            <option name="penthouse" value="The Penthouse">The Penthouse</option>-->
+    <!--        </select>-->
+    <!--    <input type="submit" value="Choose Room" id="choose-room" onclick="selectedRoom()">-->
+    <!--    <p id="chosen-room"></p>-->
+    <!--    <ul id="amenities-container">-->
+    <!--        <h4 id="amenities"></h4>-->
+    <!--        <li id="amen1"></li>-->
+    <!--        <li id="amen2"></li>-->
+    <!--        <li id="amen3"></li>-->
+    <!--        <li id="amen4"></li>-->
+    <!--    </ul>-->
+    <!--    <h5 id="occupancy"></h5>-->
+    <!--    <h5 id="availability"></h5>-->
+    <!--    <h4 id="price"></h4>-->
+    <!--</div>-->
 
 
 
