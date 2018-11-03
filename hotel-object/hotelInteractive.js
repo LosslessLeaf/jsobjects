@@ -54,23 +54,6 @@ vacant[3] = {
 
 };
 
-
-// function populate() {
-//     var roomName = document.getElementById("common-room").value;
-//     for (let i = 0; i < vacant.length; i++) {
-//         roomName.innerHTML = vacant[i].room;
-//     }
-
-//     // if (Room.classList.contains("room-name")) {
-//     //     Room.classList.remove("room-name");
-//     //     Room.classList.add("room-name-displayed");
-//     // }
-//     // else {
-//     //     Room.classList.remove("room-name-displayed");
-//     //     Room.classList.add("room-name");
-//     // }
-// }
-
 function selectedRoom() {
     var displayProperty = document.getElementById("chosen-room-display");
     var chosenRoom = document.getElementById("hotel-room").value;
@@ -102,10 +85,7 @@ function finalizedRoom() {
     var finalRoom = document.getElementById("final-room");
     var chosenRoom = document.getElementById("hotel-room").value;
     
-    
-
     if (finalRoom.classList.contains("no-display")) {
-        
         displayProperty.classList.remove("display");
         displayProperty.classList.add("no-display");
         finalRoom.classList.add("display");
@@ -117,26 +97,5 @@ function finalizedRoom() {
             }
         }
     }
-
-}
-
-function validateForm() {
-    var x = document.forms["myForm"]["fname"].value;
-
-    if (x == "") {
-        alert("Name must be filled out");
-        return false;
-    }
-    else {
-        alert(x);
-        document.getElementById("fname")
-            .addEventListener("keyup", event => {
-                event.preventDefault();
-                if (event.keyCode === 13) {
-                    document.getElementById("submit").click();
-                }
-            });
-    }
-
 
 }
