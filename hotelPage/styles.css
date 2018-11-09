@@ -1,32 +1,306 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
-    font-family: Raleway, sans-serif;
+    font-family: "Allura", cursive;
+    font-family: "Raleway", sans-serif;
     font-size: 16px;
+    width: 100%;
+    background-color: #ddd;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
 }
 
 .jumbotron {
-    background: url(https://images.pexels.com/photos/441379/pexels-photo-441379.jpeg?cs=srgb&dl=architecture-asia-bridge-441379.jpg&fm=jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1519178903933-095e0a134199?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b848e26d402889ac3dbb544f5cd6418e&auto=format&fit=crop&w=1400&q=80);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 90vh;
 }
 
-navbar ul {
+#room-container {
+    display: grid;
+    grid-template-areas: "room1 room2" "room3 room4";
+    margin-bottom: 80px;
+}
+
+.room-choice {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.4em;
+    background-color: #440000;
+    color: #ddd;
+    padding: 5px 0;
+}
+
+.room {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 4px;
+    align-content: center;
+    margin: 40px 20px 20px 20px;
+    padding: 20px 30px;
+    justify-self: center;
+    width: 500px;
+    height: 500px;
+}
+
+.room:hover {
+    background-color: #ccc;
+}
+
+.room-image {
+    height: 300px;
+    margin-bottom: 30px;
+
+}
+
+.CR {
+    background: url(http://www.hotelercilla.com/content/user/1/images/Galleries/Ercilla%20Hotel/2016_04_18_iban_erc_0462.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+
+}
+
+.SR {
+    background: url(https://i.pinimg.com/originals/e1/81/ef/e181ef00efbc49e6cfb4e5a9168223d4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.PS {
+    background: url(http://cdn.home-designing.com/wp-content/uploads/2016/04/PenthouseWindowsLivingroom.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.PH {
+    background: url(https://petervonstamm-travelblog.com/wp-content/uploads/2017/12/Mandarin-Oriental-kuala-lumpur-Presidential-Suite-Living-Room-Dusk-TITEL.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.room-name {
+    padding: 20px 0;
+    font-size: 3em;
+    font-family: "Allura", cursive;
+}
+
+#room1 {
+    grid-area: "room1";
+}
+
+#room2 {
+    grid-area: "room2";
+
+}
+
+#room3 {
+    grid-area: "room3";
+}
+
+#room4 {
+    grid-area: "room4";
+}
+
+.button button {
+    padding: 14px 25px;
+    background-color: #fff;
+    border: 1px solid #440000;
+    color: #440000;
+    font-size: 1.5em;
+    font-family: "Raleway", sans-serif;
+}
+
+.button button:hover {
+    background-color: #440000;
+    color: #fff;
+}
+
+/* HEADER ANIMATION */
+
+.jumbotron div {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    color: white;
+    font-size: 10em;
+    font-family: "Allura", cursive;
+    color: #d4af37;
+}
+
+.jumbotron div:first-of-type {
+    animation: showup 7s forwards;
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.jumbotron div:last-of-type {
+    width: 1000px;
+    animation: reveal 7s forwards;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.jumbotron div:last-of-type span {
+    margin-left: -700px;
+    animation: slidein 6s forwards;
+}
+
+@keyframes showup {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        width: 1200px;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        margin-left: -700px;
+    }
+    20% {
+        margin-left: -700px;
+    }
+    35% {
+        margin-left: 580px;
+    }
+    100% {
+        margin-left: 520px;
+    }
+}
+
+/* END HEADER ANIMATION */
+
+.container-class {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.flexy {
+    flex: 1;
+    padding: 30px;
+    align-content: center;
+}
+
+.flexy>.CR, .flexy>.SR, .flexy>.PS, .flexy>.PH {
+    width: 90%;
+    margin: 0 auto;
+    /*border-radius: 15px;*/
+    border: 2px solid #440000;
+}
+
+.amenities {
+    flex: 1;
+    /*border: 2px solid #440000;*/
+    height: 300px;
+    margin-top: 30px;
+    border-radius: 15px;
+    font-family: "Allura", cursive;
+}
+
+.amenities ul {
+    font-family: "Raleway", sans-serif;
     list-style-type: none;
-    display: inline-block;
+    list-style-position: inside;
 }
 
-navbar ul li {
-    display: inline-block;
-    padding: 20px;
-    margin: 0 20px;
-    color: black;
-    border-bottom: 5px solid transparent;
-    
+.amenities ul li {
+    padding: 5px 0;
+    font-size: 1.4em;
 }
 
-navbar ul a {
-    text-decoration: none;
+.picAndAmenities {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.priceAndOccupancy {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+.price {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    padding-right: 40px;
+    font-size: 2.5em;
+}
+
+.occupancy {
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    padding-right: 40px;
+    font-size: 2.5em;
+
+}
+
+.important {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #440000;
+}
+
+h3 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
 }

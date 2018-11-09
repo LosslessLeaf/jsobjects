@@ -1,15 +1,168 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hotel Astoria</title>
+    <link href="https://fonts.googleapis.com/css?family=Allura|Raleway:100,400,700" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
-    
-    
-    
-    
-    
-    
-    
+    <div class="container">
+        <div class="jumbotron">
+            <div>Hotel</div>
+            <div><span>Astoria</span></div>
+        </div>
+
+    </div>
+    <div id="second-container">
+        <div class="room-choice">
+            <h2>Choose how you want to stay</h2>
+        </div>
+        <div id="room-container">
+            <div class="room" id="room1">
+                <div class="room-name">The Common Room</div>
+                <div class="room-image">
+                    <div class="CR"></div>
+
+                </div>
+                <!--<div class="amenities">-->
+                <!--    <ul>-->
+                <!--        <li>Twin Mattress</li>-->
+                <!--        <li>No Smoking</li>-->
+                <!--        <li>Limited Wifi</li>-->
+                <!--        <li>No Hot Tub</li>-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--<div class="occupancy">Sleeps: 1</div>-->
+                <!--<div class="price">$60 per night</div>-->
+                <div class="button">
+                    <button onclick="displayRoom(), common()">
+                    Book me!
+                </button>
+
+                </div>
+            </div>
+            <div class="room" id="room2">
+                <div class="room-name">The State Room</div>
+                <div class="room-image">
+                    <!--<img src="https://i.pinimg.com/originals/e1/81/ef/e181ef00efbc49e6cfb4e5a9168223d4.jpg" alt="">-->
+                    <div class="SR"></div>
+                </div>
+                <!--<div class="amenities">-->
+                <!--    <ul>-->
+                <!--        <li>Twin Mattress</li>-->
+                <!--        <li>No Smoking</li>-->
+                <!--        <li>Limited Wifi</li>-->
+                <!--        <li>No Hot Tub</li>-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--<div class="occupancy"></div>-->
+                <!--<div class="price"></div>-->
+                <div class="button">
+                    <button onclick="displayRoom(), state()">
+                    Book me!
+                </button>
+
+                </div>
+            </div>
+            <div class="room" id="room3">
+                <div class="room-name">The Presidential Suite</div>
+                <div class="room-image">
+                    <!--<img src="http://www.jeckels.com/imageMapper/Vancouver2008-03.jpg" alt="">-->
+                    <div class="PS"></div>
+                </div>
+                <!--<div class="amenities">-->
+                <!--    <ul>-->
+                <!--        <li>Twin Mattress</li>-->
+                <!--        <li>No Smoking</li>-->
+                <!--        <li>Limited Wifi</li>-->
+                <!--        <li>No Hot Tub</li>-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--<div class="occupancy"></div>-->
+                <!--<div class="price"></div>-->
+                <div class="button">
+                    <button onclick="displayRoom(), presidential()">
+                    Book me!
+                </button>
+
+                </div>
+            </div>
+            <div class="room" id="room4">
+                <div class="room-name">The Penthouse</div>
+                <div class="room-image">
+                    <!--<img src="http://www.jeckels.com/imageMapper/Vancouver2008-03.jpg" alt="">-->
+                    <div class="PH"></div>
+                </div>
+                <!--<div class="amenities">-->
+                <!--    <ul>-->
+                <!--        <li>Twin Mattress</li>-->
+                <!--        <li>No Smoking</li>-->
+                <!--        <li>Limited Wifi</li>-->
+                <!--        <li>No Hot Tub</li>-->
+                <!--    </ul> -->
+                <!--</div>-->
+                <!--<div class="occupancy"></div>-->
+                <!--<div class="price"></div>-->
+                <div class="button">
+                    <button onclick="displayRoom(), penthouse()">
+                    Book me!
+                </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-class" id="common-container" style="display: none">
+        <div class="room-name">The Common Room</div>
+        <div class="picAndAmenities">
+            <div class="room-image flexy">
+                <div class="CR"></div>
+            </div>
+            <div class="amenities">
+                <h3>Amenities</h3>
+                <ul>
+                    <li><span class="important">Mattress: </span>Twin</li>
+                    <li><span class="important">Smoking: </span>N/A</li>
+                    <li><span class="important">Limited Wifi</span></li>
+                    <li><span class="important">Hot Tub: </span>N/A</li>
+                </ul>
+            </div>
+        </div>
+        <div class="priceAndOccupancy">
+            <div class="price"><span class="important">$60 </span>/night</div>
+            <div class="occupancy"><span class="important">Sleeps: </span>1</div>
+        </div>
+    </div>
+    <div class="container-class" id="state-container" style="display: none">
+        <div class="room-name">The State Room</div>
+        <div class="picAndAmenities">
+            <div class="room-image flexy">
+                <div class="SR"></div>
+            </div>
+            <div class="amenities">
+                <h3>Amenities</h3>
+                <ul>
+                    <li><span class="important">Mattress: </span>Queen</li>
+                    <li><span class="important">Smoking: </span>N/A</li>
+                    <li><span class="important">Unlimited Wifi</span></li>
+                    <li><span class="important">Hot Tub: </span>N/A</li>
+                </ul>
+            </div>
+        </div>
+        <div class="priceAndOccupancy">
+            <div class="price"><span class="important">$100 </span>/night</div>
+            <div class="occupancy"><span class="important">Sleeps: </span>2</div>
+        </div>
+    </div>
+
+
+
+    <script src="function.js"></script>
 </body>
+
 </html>
