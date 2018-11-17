@@ -65,3 +65,9 @@ function common() {
 function state() {
     document.getElementById("state-container").style.display = "flex";
 }
+
+function back() {
+    document.getElementById("second-container").style.display = "block";
+    document.getElementById("common-container").style.display = "none";
+    document.getElementById("state-container").style.display = "none";
+}
