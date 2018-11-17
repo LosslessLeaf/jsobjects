@@ -9,4 +9,7 @@ const hotel = {
     }
 };
 
+
+
+
 hotel.sayHello2("Joe", "This is your home now.");
