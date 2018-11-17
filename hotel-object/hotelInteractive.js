@@ -57,11 +57,10 @@ vacant[3] = {
 function selectedRoom() {
     var displayProperty = document.getElementById("chosen-room-display");
     var chosenRoom = document.getElementById("hotel-room").value;
-    if (displayProperty.classList.contains("no-display")) {
-        displayProperty.classList.remove("no-display");
-        displayProperty.classList.add("display");
-    }
-
+    
+    // if (displayProperty.style.visibility == "hidden") {
+        displayProperty.style.visibility = "visible";
+    // }
 
     for (let i = 0; i < vacant.length; i++) {
         if (chosenRoom == vacant[i].room) {
@@ -76,8 +75,6 @@ function selectedRoom() {
             document.getElementById("price").innerText = `Price per night: ${vacant[i].price}`;
         }
     }
-
-
 }
 
 function finalizedRoom() {
@@ -97,5 +94,4 @@ function finalizedRoom() {
             }
         }
     }
-
 }

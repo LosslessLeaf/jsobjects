@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,7 +25,7 @@ body, html {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 #main-header {
@@ -39,16 +40,29 @@ body, html {
     font-size: 40px;
 }
 
+.second-container {
+    height: 80vh;
+    display: flex;
+}
+
+#redisplay {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex: .5;
+    padding: 20px;
+
+}
+
 #room-choice {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-bottom: 20px;
 }
+
 #room-choice h2 {
-    flex: 1;
     text-align: center;
-    padding: 20px 0;
 }
 
 #hotel-room {
@@ -60,8 +74,6 @@ body, html {
 
 #choose-room {
     align-self: center;
-    padding: 25px;
-    margin-top: 40px;
     display: block;
 }
 
@@ -69,28 +81,32 @@ body, html {
     font-size: 30px;
     font-family: Montserrat, sans-serif;
     text-align: center;
-    margin: 15px 0;
-    
+
 }
+
 #amenities {
     font-size: 20px;
     margin: 0;
     padding: 0;
-    padding-left: 10px;
-    padding-bottom: 5px;
+    text-align: center;
 }
 
 #chosen-room-display {
-    margin: 0 auto;
-}
-
-#room-choice ul {
     margin: 0;
     padding: 0;
-    padding-left: 30px;
+    visibility: hidden;
+    flex: .5;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+#chosen-room-display ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
     list-style-position: inside;
 }
+
 #room-choice li {
     padding: 5px;
 }
