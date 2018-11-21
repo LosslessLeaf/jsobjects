@@ -54,5 +54,14 @@ var hotel = {
             console.log(this.roomNumbersBooked);
             return;
         }
+    },
+    checkOutOfRoom: function() {
+        if(this.roomNumbersBooked.length > 0) {
+            this.roomNumbersBooked.pop();
+            console.log(this.roomNumbersBooked);
+        } else {
+            console.log("There are no rooms booked here!");
+            return;
+        }
     }
 };
