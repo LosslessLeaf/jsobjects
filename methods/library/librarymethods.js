@@ -17,7 +17,6 @@ var library = {
     },
     checkoutBook: function checkout(book) {
         for(let i = 0; i < this.bookList.length; i++) {
-            console.log(i);
             if(this.bookList[i].title === book) {
             console.log("Good choice!", "You have chosen", this.bookList[i].title, "by", this.bookList[i].author);
             this.checkedBooks.push(this.bookList[i]);
